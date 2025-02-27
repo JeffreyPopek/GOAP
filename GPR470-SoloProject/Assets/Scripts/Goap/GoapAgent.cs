@@ -52,7 +52,8 @@ public class GoapAgent : MonoBehaviour
     {
         if (currentAction != null && currentAction.running)
         {
-            if (currentAction.agent.hasPath && currentAction.agent.remainingDistance < 1f)
+            float distanceToTarget = Vector3.Distance(currentAction.target.transform.position, transform.position);
+            if (currentAction.agent.hasPath && distanceToTarget < 2f) // TODO: Change distance threshold
             {
                 if (!_invoked)
                 {

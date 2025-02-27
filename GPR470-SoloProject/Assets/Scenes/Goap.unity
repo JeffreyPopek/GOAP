@@ -261,6 +261,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &673602779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673602781}
+  - component: {fileID: 673602780}
+  m_Layer: 0
+  m_Name: Mushroom Trigger Box
+  m_TagString: Mushroom
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &673602780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673602779}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8329465, y: 1, z: 0.42576498}
+  m_Center: {x: -0.41647327, y: 0, z: -0.28711745}
+--- !u!4 &673602781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673602779}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.1, y: 0.5, z: 5.01}
+  m_LocalScale: {x: 1, y: 1, z: 4.4926}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789064914
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +834,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2044535422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2009115699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2009115701}
+  - component: {fileID: 2009115700}
+  m_Layer: 0
+  m_Name: Wait Trigger Box
+  m_TagString: Wait
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2009115700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009115699}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8329465, y: 1, z: 0.42576498}
+  m_Center: {x: -0.41647327, y: 0, z: -0.28711745}
+--- !u!4 &2009115701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009115699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.1, y: 0.5, z: -6.14}
+  m_LocalScale: {x: 1, y: 1, z: 4.4926}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044535418
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +898,8 @@ GameObject:
   - component: {fileID: 2044535422}
   - component: {fileID: 2044535421}
   - component: {fileID: 2044535420}
+  - component: {fileID: 2044535423}
+  - component: {fileID: 2044535424}
   - component: {fileID: 2044535419}
   m_Layer: 0
   m_Name: Gatherer Agent
@@ -812,12 +920,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6fd0185db7d0994cb0175d24c2918bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionName: Action
+  actionName: GoHome
   cost: 1
   target: {fileID: 1059674870}
   targetTag: 
   duration: 0
-  preconditionsWorldState: []
+  preconditionsWorldState:
+  - key: hasArrived
+    value: 0
+  - key: hasMushroom
+    value: 0
   effectsWorldState:
   - key: isWaiting
     value: 0
@@ -875,6 +987,54 @@ Transform:
   - {fileID: 1389448863}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044535423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044535418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2451c20daff6637439b042b57ddefde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: GoWait
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Wait
+  duration: 3
+  preconditionsWorldState: []
+  effectsWorldState:
+  - key: hasArrived
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &2044535424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044535418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc1558f25fd46449bf0f534e78ac911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: GoGetMushroom
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Mushroom
+  duration: 1
+  preconditionsWorldState:
+  - key: hasArrived
+    value: 0
+  effectsWorldState:
+  - key: hasMushroom
+    value: 0
+  agent: {fileID: 0}
+  running: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -884,4 +1044,6 @@ SceneRoots:
   - {fileID: 308046194}
   - {fileID: 919932343}
   - {fileID: 1059674872}
+  - {fileID: 2009115701}
+  - {fileID: 673602781}
   - {fileID: 2044535422}
