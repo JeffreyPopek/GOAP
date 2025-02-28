@@ -40,6 +40,12 @@ public class GoapAgent : MonoBehaviour
 
 
     private bool _invoked;
+    
+    
+    void OnMouseDown()
+    {
+        AgentViewer.instance.target = gameObject;
+    }
 
     private void CompleteAction()
     {

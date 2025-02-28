@@ -12,6 +12,8 @@ public class Gatherer_GoHomeAction : GoapAction
     
     public override bool PostPerform()
     {
+        GoapWorld.Instance.GetWorld().ModifyState("IsHome", 1);
+        GoapWorld.Instance.AddBuyer(gameObject);
         return true;
     }
 }

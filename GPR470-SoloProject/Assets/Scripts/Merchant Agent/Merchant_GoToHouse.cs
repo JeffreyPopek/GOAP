@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gatherer_GoGetMushroom : GoapAction
+public class Merchant_GoToHouse : GoapAction
 {
     public override bool PrePerform()
     {
